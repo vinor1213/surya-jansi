@@ -8,7 +8,6 @@ export const metadata: Metadata = {
   description:
     "Join us to celebrate the wedding of A. Surya, B.E. and Dr. R. Jansi, B.D.S. on Thursday, 25th June 2026 at Sri Ranganathan Ranjitham Mahal, Dharmapuri.",
   
-  // Icons/Favicon using the same image
   icons: {
     icon: [
       {
@@ -37,16 +36,13 @@ export const metadata: Metadata = {
     ],
   },
   
-  // Manifest for PWA
   manifest: "/manifest.json",
   
-  // Theme color for browser UI
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "#7F1D1D" },
     { media: "(prefers-color-scheme: dark)", color: "#7F1D1D" },
   ],
   
-  // Apple specific
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
@@ -59,7 +55,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: `${baseUrl}/images/surya-jansi.png`,
+        url: `${baseUrl}/images/surya-jansi.png?v=1`,
         width: 1200,
         height: 630,
         alt: "Wedding Invitation",
@@ -74,10 +70,9 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "A. Surya & Dr. R. Jansi — Wedding",
     description: "25th June 2026 · Sri Ranganathan Ranjitham Mahal · Dharmapuri",
-    images: [`${baseUrl}/images/surya-jansi.png`],
+    images: [`${baseUrl}/images/surya-jansi.png?v=1`],
   },
   
-  // Additional metadata
   metadataBase: new URL(baseUrl),
   alternates: {
     canonical: "/",
@@ -113,8 +108,45 @@ export default function RootLayout({
   return (
     <html lang="ta">
       <head>
-        {/* Additional link tags if needed */}
+        {/* ============================================ */}
+        {/* CRITICAL: EXPLICIT META TAGS FOR WHATSAPP    */}
+        {/* ============================================ */}
+        
+        {/* Basic OG Tags */}
+        <meta property="og:title" content="A. Surya & Dr. R. Jansi — Wedding Invitation" />
+        <meta property="og:description" content="Join us to celebrate the wedding of A. Surya, B.E. and Dr. R. Jansi, B.D.S. on Thursday, 25th June 2026 at Sri Ranganathan Ranjitham Mahal, Dharmapuri." />
+        <meta property="og:image" content={`${baseUrl}/images/surya-jansi.png?v=1`} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:url" content={baseUrl} />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Surya & Jansi Wedding" />
+        <meta property="og:locale" content="ta_IN" />
+        
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="A. Surya & Dr. R. Jansi — Wedding Invitation" />
+        <meta name="twitter:description" content="Join us to celebrate the wedding of A. Surya, B.E. and Dr. R. Jansi, B.D.S. on Thursday, 25th June 2026 at Sri Ranganathan Ranjitham Mahal, Dharmapuri." />
+        <meta name="twitter:image" content={`${baseUrl}/images/surya-jansi.png?v=1`} />
+        <meta name="twitter:image:alt" content="Wedding Invitation" />
+        
+        {/* WhatsApp Specific */}
+        <meta property="al:ios:url" content={baseUrl} />
+        <meta property="al:android:url" content={baseUrl} />
+        <meta name="whatsapp:title" content="A. Surya & Dr. R. Jansi — Wedding Invitation" />
+        
+        {/* Additional Social Media Tags */}
+        <meta property="og:image:secure_url" content={`${baseUrl}/images/surya-jansi.png?v=1`} />
+        <meta name="image" content={`${baseUrl}/images/surya-jansi.png?v=1`} />
+        
+        {/* Fallback for older crawlers */}
+        <link rel="image_src" href={`${baseUrl}/images/surya-jansi.png?v=1`} />
         <link rel="mask-icon" href="/images/surya-jansi.png" color="#7F1D1D" />
+        
+        {/* ============================================ */}
+        {/* END OF CRITICAL META TAGS                    */}
+        {/* ============================================ */}
       </head>
       <body className="antialiased">{children}</body>
     </html>
