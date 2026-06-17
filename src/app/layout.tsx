@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://suryajansi.vercel.app";
+// Use a timestamp to force cache refresh
+const imageVersion = Date.now();
+const imageUrl = `${baseUrl}/images/surya-jansi.jpg?v=${imageVersion}`;
 
 export const metadata: Metadata = {
   title: "A. Surya & Dr. R. Jansi — Wedding Invitation",
@@ -13,17 +16,17 @@ export const metadata: Metadata = {
       {
         url: "/images/surya-jansi.jpg",
         sizes: "32x32",
-        type: "image/jpg",
+        type: "image/jpeg",
       },
       {
         url: "/images/surya-jansi.jpg",
         sizes: "192x192",
-        type: "image/jpg",
+        type: "image/jpeg",
       },
       {
         url: "/images/surya-jansi.jpg",
         sizes: "512x512",
-        type: "image/jpg",
+        type: "image/jpeg",
       },
     ],
     shortcut: "/images/surya-jansi.jpg",
@@ -31,7 +34,7 @@ export const metadata: Metadata = {
       {
         url: "/images/surya-jansi.jpg",
         sizes: "180x180",
-        type: "image/jpg",
+        type: "image/jpeg",
       },
     ],
   },
@@ -55,7 +58,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: `${baseUrl}/images/surya-jansi.jpg?v=1`,
+        url: imageUrl,
         width: 1200,
         height: 630,
         alt: "Wedding Invitation",
@@ -70,7 +73,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "A. Surya & Dr. R. Jansi — Wedding",
     description: "25th June 2026 · Sri Ranganathan Ranjitham Mahal · Dharmapuri",
-    images: [`${baseUrl}/images/surya-jansi.jpg?v=1`],
+    images: [imageUrl],
   },
   
   metadataBase: new URL(baseUrl),
@@ -108,45 +111,24 @@ export default function RootLayout({
   return (
     <html lang="ta">
       <head>
-        {/* ============================================ */}
-        {/* CRITICAL: EXPLICIT META TAGS FOR WHATSAPP    */}
-        {/* ============================================ */}
-        
-        {/* Basic OG Tags */}
+        {/* CRITICAL: EXPLICIT META TAGS FOR WHATSAPP */}
         <meta property="og:title" content="A. Surya & Dr. R. Jansi — Wedding Invitation" />
         <meta property="og:description" content="Join us to celebrate the wedding of A. Surya, B.E. and Dr. R. Jansi, B.D.S. on Thursday, 25th June 2026 at Sri Ranganathan Ranjitham Mahal, Dharmapuri." />
-        <meta property="og:image" content={`${baseUrl}/images/surya-jansi.jpg?v=1`} />
+        <meta property="og:image" content={imageUrl} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta property="og:image:type" content="image/jpg" />
+        <meta property="og:image:type" content="image/jpeg" />
         <meta property="og:url" content={baseUrl} />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Surya & Jansi Wedding" />
-        <meta property="og:locale" content="ta_IN" />
         
-        {/* Twitter Card Tags */}
+        {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="A. Surya & Dr. R. Jansi — Wedding Invitation" />
         <meta name="twitter:description" content="Join us to celebrate the wedding of A. Surya, B.E. and Dr. R. Jansi, B.D.S. on Thursday, 25th June 2026 at Sri Ranganathan Ranjitham Mahal, Dharmapuri." />
-        <meta name="twitter:image" content={`${baseUrl}/images/surya-jansi.jpg?v=1`} />
-        <meta name="twitter:image:alt" content="Wedding Invitation" />
+        <meta name="twitter:image" content={imageUrl} />
         
-        {/* WhatsApp Specific */}
-        <meta property="al:ios:url" content={baseUrl} />
-        <meta property="al:android:url" content={baseUrl} />
-        <meta name="whatsapp:title" content="A. Surya & Dr. R. Jansi — Wedding Invitation" />
-        
-        {/* Additional Social Media Tags */}
-        <meta property="og:image:secure_url" content={`${baseUrl}/images/surya-jansi.jpg?v=1`} />
-        <meta name="image" content={`${baseUrl}/images/surya-jansi.jpg?v=1`} />
-        
-        {/* Fallback for older crawlers */}
-        <link rel="image_src" href={`${baseUrl}/images/surya-jansi.jpg?v=1`} />
         <link rel="mask-icon" href="/images/surya-jansi.jpg" color="#7F1D1D" />
-        
-        {/* ============================================ */}
-        {/* END OF CRITICAL META TAGS                    */}
-        {/* ============================================ */}
       </head>
       <body className="antialiased">{children}</body>
     </html>
