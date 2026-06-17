@@ -42,7 +42,7 @@ const groomFamily: FamilyGroup = {
         " Scientific Business Manager, Hedge & Hedge Pharmaceutical LLP",
     },
     {
-      name: "V.A. தீக்ஷித் கிருஷ்ணா",
+      name: "V.A. தீக்க்ஷித் கிருஷ்ணா",
       detail: "மதிகோன்பாளையம், தருமபுரி நகரம்",
     },
   ],
