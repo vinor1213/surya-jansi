@@ -106,14 +106,12 @@ const distinguishedGuests = [
       "நெசவியலர், மதிகோன்பாளையம், தருமபுரி",
   },
 
-
-
-   {
-    name: "Dr. J.T. ஆனந்த் திலக்",
+    {
+    name: "Dr. J.T. ஆலன் திலக்",
     detail: "MBBS., M.S.(Ortho)"
   },
   {
-    name: "Dr. ஜெகன்கார்த்தினி",
+    name: "Dr. ரேணுகாதேவி",
     detail: "MBBS., M.S.(Obg)"
   },
   {
@@ -121,7 +119,7 @@ const distinguishedGuests = [
     detail: "MBBS., M.D.(Pead)"
   },
   {
-    name: "திருமதி. A. பாலசரி மணி",
+    name: "திருமதி. A. லட்சுமி மணி",
     detail: "B.Sc., M.Sc."
   }
   
