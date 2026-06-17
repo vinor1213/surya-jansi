@@ -8,7 +8,7 @@ const navLinks = [
   { label: "Home", href: "#home" },
   { label: "Couple", href: "#couple" },
   { label: "Families", href: "#families" },
-  { label: "Event", href: "#event" },
+  { label: "Events", href: "#event" },
   { label: "Venue", href: "#venue" },
 ];
 

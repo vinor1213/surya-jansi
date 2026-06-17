@@ -11,27 +11,27 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: "/images/surya-jansi.png",
+        url: "/images/surya-jansi.jpg",
         sizes: "32x32",
-        type: "image/png",
+        type: "image/jpg",
       },
       {
-        url: "/images/surya-jansi.png",
+        url: "/images/surya-jansi.jpg",
         sizes: "192x192",
-        type: "image/png",
+        type: "image/jpg",
       },
       {
-        url: "/images/surya-jansi.png",
+        url: "/images/surya-jansi.jpg",
         sizes: "512x512",
-        type: "image/png",
+        type: "image/jpg",
       },
     ],
-    shortcut: "/images/surya-jansi.png",
+    shortcut: "/images/surya-jansi.jpg",
     apple: [
       {
-        url: "/images/surya-jansi.png",
+        url: "/images/surya-jansi.jpg",
         sizes: "180x180",
-        type: "image/png",
+        type: "image/jpg",
       },
     ],
   },
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: `${baseUrl}/images/surya-jansi.png?v=1`,
+        url: `${baseUrl}/images/surya-jansi.jpg?v=1`,
         width: 1200,
         height: 630,
         alt: "Wedding Invitation",
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "A. Surya & Dr. R. Jansi — Wedding",
     description: "25th June 2026 · Sri Ranganathan Ranjitham Mahal · Dharmapuri",
-    images: [`${baseUrl}/images/surya-jansi.png?v=1`],
+    images: [`${baseUrl}/images/surya-jansi.jpg?v=1`],
   },
   
   metadataBase: new URL(baseUrl),
@@ -115,10 +115,10 @@ export default function RootLayout({
         {/* Basic OG Tags */}
         <meta property="og:title" content="A. Surya & Dr. R. Jansi — Wedding Invitation" />
         <meta property="og:description" content="Join us to celebrate the wedding of A. Surya, B.E. and Dr. R. Jansi, B.D.S. on Thursday, 25th June 2026 at Sri Ranganathan Ranjitham Mahal, Dharmapuri." />
-        <meta property="og:image" content={`${baseUrl}/images/surya-jansi.png?v=1`} />
+        <meta property="og:image" content={`${baseUrl}/images/surya-jansi.jpg?v=1`} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:type" content="image/jpg" />
         <meta property="og:url" content={baseUrl} />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Surya & Jansi Wedding" />
@@ -128,7 +128,7 @@ export default function RootLayout({
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="A. Surya & Dr. R. Jansi — Wedding Invitation" />
         <meta name="twitter:description" content="Join us to celebrate the wedding of A. Surya, B.E. and Dr. R. Jansi, B.D.S. on Thursday, 25th June 2026 at Sri Ranganathan Ranjitham Mahal, Dharmapuri." />
-        <meta name="twitter:image" content={`${baseUrl}/images/surya-jansi.png?v=1`} />
+        <meta name="twitter:image" content={`${baseUrl}/images/surya-jansi.jpg?v=1`} />
         <meta name="twitter:image:alt" content="Wedding Invitation" />
         
         {/* WhatsApp Specific */}
@@ -137,12 +137,12 @@ export default function RootLayout({
         <meta name="whatsapp:title" content="A. Surya & Dr. R. Jansi — Wedding Invitation" />
         
         {/* Additional Social Media Tags */}
-        <meta property="og:image:secure_url" content={`${baseUrl}/images/surya-jansi.png?v=1`} />
-        <meta name="image" content={`${baseUrl}/images/surya-jansi.png?v=1`} />
+        <meta property="og:image:secure_url" content={`${baseUrl}/images/surya-jansi.jpg?v=1`} />
+        <meta name="image" content={`${baseUrl}/images/surya-jansi.jpg?v=1`} />
         
         {/* Fallback for older crawlers */}
-        <link rel="image_src" href={`${baseUrl}/images/surya-jansi.png?v=1`} />
-        <link rel="mask-icon" href="/images/surya-jansi.png" color="#7F1D1D" />
+        <link rel="image_src" href={`${baseUrl}/images/surya-jansi.jpg?v=1`} />
+        <link rel="mask-icon" href="/images/surya-jansi.jpg" color="#7F1D1D" />
         
         {/* ============================================ */}
         {/* END OF CRITICAL META TAGS                    */}
